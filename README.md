@@ -1,51 +1,47 @@
-![header-image](./public/CryptoCredly-banner.png)
+# What it does
 
-# CryptoCredly
-
-A decentralized dapp for professional credentialing to help devs verify their skills in a competitive tech market.
-
-## Demo
+DaoCredly is a decentralized reputation and credentialing system designed for members of decentralized autonomous organizations (DAOs). It allows members to accumulate and verify credentials based on their contributions and participation in DAO activities. These credentials are stored securely on the blockchain, allowing for trustless verification of an individual’s reputation and role within a decentralized community. Members can showcase their credentials as proof of expertise, roles, and involvement in various DAOs.
 
 
-https://user-images.githubusercontent.com/56947075/160295451-e507ab9c-e445-45d0-973d-7e927810e4ac.mp4
+# The problem it solves
 
-Link: https://github.com/BrianHHough/cryptocredly/blob/main/assets/lfgrow%20hackathon%20demo.mp4
+In decentralized ecosystems, reputation and credentials are critical, yet they are often difficult to verify or prove. Traditional systems rely on centralized institutions or third parties to manage certifications and professional histories. DaoCredly solves this by decentralizing the process, making reputation and credential verification transparent, immutable, and trustless. This ensures that members can easily prove their contributions without relying on intermediaries, while DAOs can assess the credibility of potential contributors more effectively.
 
-### Tools Utilized:
 
-- **Front-End:** NEXTjs with TypeScript
-- **Back-End:** Ethers.js (Web3 API) + Solidity (Smart Contracts) + Moralis (Web3 Database + Hooks)
-- **Blockchain:** LENS Protocol (Social Graph) + Polygon (Mumbai Testnet)
+# Challenges I ran into
 
-## Getting Started
+Decentralized Identity: One of the key challenges was ensuring secure and reliable user identification in a decentralized way, without relying on traditional identity verification systems.
 
-First, run the development server:
+Credential Verification: Developing a system for verifying credentials without centralized authority posed significant difficulties, requiring a solution that leverages blockchain-based cryptographic proofs.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Integrating Wallets and Authentication: Seamlessly integrating multiple wallet providers (e.g., WalletConnect, Web3Auth) for authentication and signing transactions was complex due to their different APIs and compatibility issues.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Gas Fees: Managing on-chain transactions and ensuring that gas fees were minimized for issuing and verifying credentials was another hurdle that required optimization.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+# Technologies I used
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Next.js: For building the front-end of the application, ensuring a smooth and responsive user experience.
 
-## Learn More
+React.js: As the core front-end framework for creating dynamic components and handling user interactions.
 
-To learn more about Next.js, take a look at the following resources:
+Ethers.js: For interacting with the Ethereum blockchain, handling smart contract interactions and wallet management.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Hardhat: A development environment for compiling and deploying smart contracts.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Moralis: To simplify Web3 development, managing backend functions like user authentication and syncing on-chain data.
 
-## Deploy on Vercel
+Magic SDK: For secure, passwordless login via email and wallet integration.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Web3Auth and WalletConnect: To support decentralized authentication and wallet connection.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Ant Design (antd): For UI components to create a professional and clean interface.
+
+SWR: For data fetching and caching in the front end, ensuring smooth real-time updates
+
+
+# How we built it
+
+We began by setting up the Next.js framework and integrating React for component-based development. Ethers.js was used to interact with the Ethereum network, managing smart contracts that handled credential issuance and verification. For authentication, we integrated WalletConnect and Web3Auth to allow users to log in via decentralized wallets. We also leveraged Moralis and Magic SDK to simplify backend functions and secure login experiences.
+
+We designed and deployed the smart contracts using Hardhat, ensuring that credentials were stored on-chain, while Ant Design helped us build a clean and user-friendly interface. SWR was employed for efficient data fetching and real-time updates, improving the overall user experience.
